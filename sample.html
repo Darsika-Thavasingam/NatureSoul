@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Nature Photography</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    /* Hero background */
+    .hero {
+      background: url('https://picsum.photos/id/1018/1920/600') no-repeat center center;
+      background-size: cover;
+      height: 60vh;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+    /* Gallery image hover zoom */
+    .gallery-img {
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery-img:hover {
+      transform: scale(1.05);
+      z-index: 10;
+      position: relative;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+    /* Profile image circle */
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #0d6efd;
+      box-shadow: 0 0 10px rgba(13,110,253,0.5);
+    }
+    /* Footer background */
+    footer {
+      background-color: #0d6efd;
+      color: white;
+      padding: 1rem 0;
+    }
+    footer a {
+      color: white;
+      margin: 0 0.5rem;
+      font-size: 1.25rem;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #ffc107;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Darsika Thavam</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" 
+      aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold">
+        <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero" class="hero">
+  <div>
+    <h1 class="display-4 fw-bold">Capturing Nature’s Beauty, One Click at a Time</h1>
+    <p class="lead">A glimpse through my lens into the wonders of the natural world.</p>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="container my-5">
+  <h2 class="text-center mb-4 fw-bold">Photo Gallery</h2>
+  <div class="row g-3">
+    <!-- Sample Images -->
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <img src="https://picsum.photos/id/1015/400/300" alt="Forest" class="gallery-img img-fluid rounded shadow" />
+      <p class="text-center mt-2">Misty Forest</p>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <img src="https://picsum.photos/id/1019/400/300" alt="Mountain" class="gallery-img img-fluid rounded shadow" />
+      <p class="text-center mt-2">Majestic Mountains</p>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <img src="https://picsum.photos/id/1021/400/300" alt="River" class="gallery-img img-fluid rounded shadow" />
+      <p class="text-center mt-2">Serene River</p>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <img src="https://picsum.photos/id/1025/400/300" alt="Sunset" class="gallery-img img-fluid rounded shadow" />
+      <p class="text-center mt-2">Sunset Glow</p>
+    </div>
+    <!-- Add more images as you like -->
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="bg-light py-5">
+  <div class="container text-center">
+    <h2 class="mb-4 fw-bold">About Me</h2>
+    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Darsika Thavam" class="profile-pic mb-3" />
+    <p class="lead mx-auto" style="max-width:600px;">
+      Hi! I’m Darsika, a passionate photographer who loves capturing the beauty of nature through my lens.  
+      From majestic mountains to serene rivers, my goal is to bring the wonders of the natural world to you.  
+      Thanks for visiting my gallery!
+    </p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="container my-5">
+  <h2 class="text-center mb-4 fw-bold">Get In Touch</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label fw-semibold">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Your name" required />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label fw-semibold">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="name@example.com" required />
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label fw-semibold">Message</label>
+          <textarea class="form-control" id="message" rows="4" placeholder="Write your message here..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100 fw-bold">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center">
+  <div class="container">
+    <p>Connect with me on social media</p>
+    <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+        <path d="M0 1.146C0 .513.324 0 .725 0h14.55c.4 0 .725.513.725 1.146v13.708c0 .633-.324 1.146-.725 1.146H.725A.723.723 0 0 1 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.21c.837 0 1.358-.554 1.358-1.248-.015-.71-.52-1.249-1.342-1.249-.823 0-1.358.54-1.358 1.249 0 .694.52 1.248 1.327 1.248h.015zm4.908 8.21V9.359c0-.215.015-.43.08-.586.173-.43.567-.877 1.23-.877.868 0 1.215.66 1.215 1.626v3.873h2.401v-4.153c0-2.223-1.184-3.258-2.765-3.258-1.277 0-1.845.705-2.165 1.2h.03v-1.03H7.653c.03.67 0 7.225 0 7.225h2.4z"/>
+      </svg>
+    </a>
+    <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 3.163c1.837 0 2.056.007 2.78.04.72.033 1.214.148 1.5.25.367.13.63.287.907.565.28.28.436.54.566.906.104.283.217.777.25 1.5.034.726.04.945.04 2.78s-.006 2.056-.04 2.78c-.033.72-.146 1.214-.25 1.5-.13.366-.285.63-.566.907-.277.28-.54.435-.906.566-.283.104-.777.217-1.5.25-.726.034-.945.04-2.78.04s-2.056-.006-2.78-.04c-.72-.033-1.214-.146-1.5-.25a2.36 2.36 0 0 1-.906-.566 2.16 2.16 0 0 1-.566-.906c-.103-.283-.216-.777-.25-1.5-.034-.726-.04-.945-.04-2.78s.006-2.056.04-2.78c.034-.723.147-1.217.25-1.5.13-.366.285-.63.566-.907a2.27 2.27 0 0 1 .906-.566c.283-.103.777-.216 1.5-.25.724-.034.944-.04 2.78-.04zm0-1.163c-1.87 0-2.107.007-2.842.04-1.4.066-2.37.317-3.21 1.157-.84.84-1.09 1.81-1.156 3.21-.034.735-.04.972-.04 2.842s.007 2.108.04 2.843c.067 1.398.317 2.368 1.156 3.208.84.84 1.81 1.09 3.21 1.156.735.033.972.04 2.842.04s2.108-.007 2.843-.04c1.398-.067 2.368-.317 3.208-1.156.84-.84 1.09-1.81 1.156-3.21.033-.735.04-.972.04-2.842s-.007-2.108-.04-2.843c-.067-1.398-.317-2.368-1.156-3.208-.84-.84-1.81-1.09-3.21-1.156-.735-.034-.972-.04-2.842-.04z"/>
+        <path d="M8 5.838a2.162 2.162 0 1 0 0 4.324 2.162 2.162 0 0 0 0-4.324zm0 3.567a1.405 1.405 0 1 1 0-2.81 1.405 1.405 0 0 1 0 2.81z"/>
+        <circle cx="12.5" cy="3.5" r="1"/>
+      </svg>
+    </a>
+  </div>
+  <p class="mt-3 mb-0">&copy; 2025 Darsika Thavam. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
