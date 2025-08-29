@@ -74,14 +74,84 @@
             border-radius: 5px;
             padding: 2px 6px; 
         }
+        .about-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid green ;
+            margin: 15px 0;
+            transition: transform 0.3s ease;
+        }
+
+        .about-img:hover {
+            transform: scale(1.05);
+        }
+        .hero {
+            height: 700px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+            background-size: cover;
+            background-position: center;
+            animation: bgChange 20s infinite;
+        }
+            @keyframes bgChange {
+            0%   { background-image: url('images/image-31.jpeg'); }
+            25%  { background-image: url('images/image-29.jpg'); }
+            50%  { background-image: url('images/image-22.jpg'); }
+            75%  { background-image: url('images/image-4.jpg'); }
+            100% { background-image: url('images/image-5.jpg'); }
+        }
+        .hero-title {
+          animation: fadeInDown 2s ease;
+        }
+
+        .hero-subtitle {
+          font-size: 1.5rem;
+          margin-top: 15px;
+          animation: fadeInUp 2.5s ease;
+        }
+
+        .hero-btn {
+          padding: 12px 30px;
+          border-radius: 30px;
+          animation: zoomIn 3s ease;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hero-btn:hover {
+          transform: scale(1.1);
+          box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+      
+        @keyframes fadeInDown {
+          from { opacity: 0; transform: translateY(-50px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(50px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes zoomIn {
+          from { opacity: 0; transform: scale(0.8); }
+          to { opacity: 1; transform: scale(1); }
+        }
+
       </style>
     </head>
 <body>
-<div class="container bg-white">
+<div class="con bg-white">
         <header class="p-3 bg-success fixed-top">
         <div class="row">
             <div class="col-12 col-md-6">
-                <h1>NatureSoul</h1>
+                <h1 class="text-white">NatureSoul</h1>
             </div>
             <div class="col-12 col-md-6 mt-2 d-flex justify-content-start justify-content-md-end"> 
                 <nav>
@@ -95,18 +165,10 @@
             </div>
         </div>
     </header>
-    <section id="hero" class="hero p-5 text-center"
-     style="background-image: url('images/about-background-1.jpeg');
-            background-size: cover;
-            height: 700px;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-shadow: 2px 2px 6px rgba(0,0,0,0.7);">
-        <h1 class="display-4 fw-bold">Experience the essence of nature with NatureSoul</h1>
+    <section id="hero" class="hero p-5 text-center d-flex flex-column justify-content-center align-items-center col-12">
+      <h1 class="display-3 fw-bold hero-title mb-3">Experience the Essence of Nature</h1>
+      <p class="lead hero-subtitle mb-4">Breathe deeply, wander freely, and connect with the beauty around you 🌿</p>
+      <a href="#gallery" class="btn btn-lg btn-success fw-bold hero-btn">Explore Gallery</a>
     </section>
 </div>
 <section id="gallery" class=" gallery container my-5">
@@ -192,11 +254,52 @@
       <img src="images/image-20.jpg" alt="Sunset" class="gallery-img img-fluid rounded shadow" />
       <p class="text-center mt-2">Hidden yet full of life</p>
     </div>
-  </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <img src="images/image-21.jpg" alt="Mountain" class="gallery-img img-fluid rounded shadow" />
+      <p class="text-center mt-2">Where the city sleeps under a snowy crown</p>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <img src="images/image-22.jpg" alt="River" class="gallery-img img-fluid rounded shadow" />
+      <p class="text-center mt-2">Every path leads to a story</p>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <img src="images/image-23.jpg" alt="Sunset" class="gallery-img img-fluid rounded shadow" />
+      <p class="text-center mt-2">Even small roots hold big dreams</p>
+    </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+      <img src="images/image-24.jpg" alt="Forest" class="gallery-img img-fluid rounded shadow" />
+      <p class="text-center mt-2">Nature’s green tunnel of peace</p>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <img src="images/image-25.jpg" alt="Mountain" class="gallery-img img-fluid rounded shadow" />
+      <p class="text-center mt-2">Endless canvas painted by light</p>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <img src="images/image-26.jpg" alt="River" class="gallery-img img-fluid rounded shadow" />
+      <p class="text-center mt-2">Where strength meets serenity</p>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <img src="images/image-27.jpg" alt="Sunset" class="gallery-img img-fluid rounded shadow" />
+      <p class="text-center mt-2">Wings of freedom in a fragile form</p>
+    </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+      <img src="images/image-28.jpg" alt="Forest" class="gallery-img img-fluid rounded shadow" />
+      <p class="text-center mt-2">Chasing horizons bathed in gold</p>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <img src="images/image-29.jpg" alt="Mountain" class="gallery-img img-fluid rounded shadow" />
+      <p class="text-center mt-2">A single guardian kissed by the sun</p>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <img src="images/image-30.jpg" alt="River" class="gallery-img img-fluid rounded shadow" />
+      <p class="text-center mt-2">Silent giants touching the sky</p>
+    </div>
+        </div>
 </section>
 <section id="about" class="about py-10 bg-light section-card">
   <div class="container mx-auto text-center max-w-2xl">
     <h2 class="text-3xl font-bold mb-4">About Me</h2>
+    <img src="images/myimage.png" alt="My Photo" class="about-img">
     <p class="lead text-secondary">
       Hi! I’m Darsika, a passionate photographer who loves capturing the beauty of nature through my lens.  
       From majestic mountains to serene rivers, my goal is to bring the wonders of the natural world to you.  
